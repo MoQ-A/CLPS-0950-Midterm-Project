@@ -12,3 +12,9 @@ game_board = initial_config(game_board,cluster_count,board_rows,board_columns);
 update_board(game_board);
 
 % Beginning simulation
+generation_count = input('How many generations? \n');
+for count = 1:generation_count
+    update_cells(game_board);
+    update_board(game_board);
+%     update_UI();
+end
