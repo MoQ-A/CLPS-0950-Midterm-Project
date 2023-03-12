@@ -20,3 +20,9 @@ f = msgbox('Start', "Custom", myicon);
 
 
 
+
+% Get game board dimensions from user
+%board_rows = input('Number of rows? \n');
+%board_columns = input('Number of columns? \n');
+%cluster_count = input('Number of cell clusters? \n');
+
