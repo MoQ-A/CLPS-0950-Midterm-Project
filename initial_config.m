@@ -10,7 +10,7 @@ function [new_board] = initial_config(blank_board,cluster_count,rows,columns)
             % Chance of a given grid unit generating a cell scales
             % with the size of the board (i.e. bigger board equals
             % smaller chance for a given grid unit)
-		    if randi(cell_count) < cell_count/(2*cluster_count)
+		    if randi(cell_count) < cell_count/(4*cluster_count)
                 new_board(ii:ii+1,jj:jj+1,1:3) = 0;
                 kk = kk+1;
                 if kk == cluster_count

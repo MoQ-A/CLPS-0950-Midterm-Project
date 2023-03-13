@@ -14,7 +14,9 @@ update_board(game_board);
 % Beginning simulation
 generation_count = input('How many generations? \n');
 for count = 1:generation_count
-    update_cells(game_board);
+    game_board = update_cells(game_board);
     update_board(game_board);
+    imshow(game_board, [0 255],'InitialMagnification','fit');
+    pause(2);
 %     update_UI();
 end
