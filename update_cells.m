@@ -3,8 +3,8 @@ function [next_generation] = update_cells(prev_generation)
 %   Copy previous generation data onto a new variable to be modified
     next_generation = prev_generation;
 
-%   The if statments in the For loop can be replaced by nesting another For
-%   loop within
+%   Look through inidividual grid units, excluding the uninhabitable RED
+%   zone
     for ii = 2:length(prev_generation)-1
         for jj = 2:length(prev_generation)-1
             % neighbor_count is reset for each grid unit
@@ -24,11 +24,19 @@ function [next_generation] = update_cells(prev_generation)
 
                 end
             end
-            if neighbor_count < 2 || neighbor_count > 2
-                next_generation(ii,jj,:) = 255;
+            % Protocol for grid unit with live cell
+            if next_generation(ii,jj,:) == 0
+                if neighbor_count ~= 2 || neighbor_count ~= 3
+                    next_generation(ii,jj,:) = 255;
+                end
+            end
+            % Protocol for empty grid unit
+            if next_generation(ii,jj,:) == 255
+                if neighbor_count == 3
+                    next_generation(ii,jj,:) = 0;
+                end
             end
         end
     end
-
 end
 
