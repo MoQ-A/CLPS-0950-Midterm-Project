@@ -5,8 +5,8 @@ function [new_board] = initial_config(blank_board,cluster_count)
     new_board = blank_board;
     cell_count = (length(blank_board))^2;
     kk = 0;
-    for ii = 2:3:length(blank_board)-2
-        for jj = 2:3:length(blank_board)-2
+    for ii = 10:5:length(blank_board)-2
+        for jj = 5:5:length(blank_board)-2
             % Chance of a given grid unit generating a cell scales
             % with the size of the board (i.e. bigger board equals
             % smaller chance for a given grid unit)
