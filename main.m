@@ -2,7 +2,7 @@
 % msgbox('Enter values into command line.', 'Popup Window', 'help');
 
 % Get game game simulation parameters from user
-side_length = input('What is the game board side length? \n');
+side_length = input('What is the game board size? \n');
 cluster_count = input('Number of cell clusters? \n');
 generation_count = input('How many generations? \n');
 
