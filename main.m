@@ -18,3 +18,12 @@ for count = 1:generation_count
     figure(count)
     update_board(game_board);
 end
+
+% Clear Board
+clear_board = input('Enter "1" to clear boards. \n');
+if clear_board == 1
+    for ii = 1:generation_count
+        fig = figure(ii);
+        close(fig);
+    end
+end

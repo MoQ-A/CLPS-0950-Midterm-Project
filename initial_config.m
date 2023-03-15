@@ -13,14 +13,15 @@ function [new_board] = initial_config(blank_board,cluster_count)
 		    if randi(cell_count) < cell_count/(2*cluster_count)
                 config_select = randi(3);
                 if config_select == 1
-                    new_board(ii:ii+4,jj:jj+4,1:3) = 0;
+                    new_board(ii:ii+3,jj:jj+3,1:3) = 0;
                 end
                 if config_select == 2
                     new_board(ii:ii+3,jj,1:3) = 0;
                     new_board(ii,jj:jj+3,1:3) = 0;
                 end
                 if config_select == 3
-                    new_board(ii,jj:jj+5,1:3) = 0;
+                    new_board(ii,jj-3:jj+3,1:3) = 0;
+                    new_board(ii-3:ii+3,jj,1:3) = 0;
                 end
                 kk = kk+1;
                 if kk == cluster_count
