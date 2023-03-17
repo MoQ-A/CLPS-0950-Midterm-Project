@@ -3,6 +3,8 @@
 % test_mat(10:11,10:11,:) = 0;
 % test_mat(3:4,3:4,:) = 0;
 
-game_board = create_board(10);
-game_board = initial_config(game_board,2);
-next_gen = update_cells(game_board);
+% game_board = create_board(10);
+% game_board = initial_config(game_board,2);
+% next_gen = update_cells(game_board);
+
+fhandle = @(x,y) x.^2 + y.^2;
