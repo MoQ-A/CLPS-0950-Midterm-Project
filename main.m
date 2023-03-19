@@ -9,20 +9,20 @@ generation_count = input('How many generations? \n');
 % Create game board
 game_board = create_board(side_length);
 game_board = initial_config(game_board,cluster_count);
-figure('Name','Starting Configuration')
+figure('Name','Generation 1')
 update_board(game_board);
 
 % Beginning simulation
-for count = 1:generation_count
+for count = 2:generation_count
     game_board = update_cells(game_board);
-    figure(count)
+    figure('Name',strcat('Generation',num2str(count)))
     update_board(game_board);
 end
 
 % Clear Board
 clear_board = input('Enter "1" to clear boards. \n');
 if clear_board == 1
-    for ii = 1:generation_count
+    for ii = generation_count:-1:1
         fig = figure(ii);
         close(fig);
     end

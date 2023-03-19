@@ -14,7 +14,7 @@ for ii = 1:prev_dimension(1)
         for yy = max(1,ii-1):min(prev_dimension(1),ii+1)
             for xx = max(1,jj-1):min(prev_dimension(2),jj+1)
                 % Exempting the grid unit itself
-                if ~(yy == ii && xx == jj) && prev_dimension(3) > 1 && all(prev_generation(yy,xx,:) == 0)
+                if ~(yy == ii && xx == jj) && all(prev_generation(yy,xx,:) == 0)
                     % If adjacent grid unit is black, i.e. has a live cell
                     neighbor_count = neighbor_count+1;
                 end
