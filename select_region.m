@@ -10,3 +10,5 @@ end
 
 set(p,'ButtonDownFcn',@(~,~)disp('patch'),...
    'PickableParts','all','FaceColor','none')
+
+update_board(new_board);
