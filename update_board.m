@@ -1,6 +1,6 @@
 function [] = update_board(game_board)
-% UPDATE_BOARD updates the figure for the board showing new positions
 
+% UPDATE_BOARD updates the figure for the board showing new positions
 %   Creating RED uninhabitable zone
     game_board(1,:,2:3) = 0;
     game_board(1,:,1) = 255;
@@ -19,5 +19,6 @@ function [] = update_board(game_board)
     pause(0.5);
     hold off;
 
+end
 %   Create message box showing current generation (developer testing feature)
 %   msgbox(generation_num, 'Generation');
