@@ -6,4 +6,4 @@ The program is run primarily through the command line.
 
 
 Demo
-![til](Users/mo/Documents/MATLAB/GitHub/Demo.gif)
+![til](./Demo.gif)
