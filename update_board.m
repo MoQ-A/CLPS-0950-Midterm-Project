@@ -14,7 +14,7 @@ function [] = update_board(game_board)
 %   Takes board matrix and makes it into an image while formatting into
 %   specific dimensions
     imshow(game_board, [0 255],'InitialMagnification','fit');
-    truesize([500 500])
+    truesize([600 600])
     axis off;
     pause(0.5);
     hold off;
