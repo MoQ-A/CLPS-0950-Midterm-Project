@@ -6,4 +6,4 @@ The program is run primarily through the command line.
 
 
 Demo
-![til](./Demo.gif)
+![me](https://github.com/MoQ-A/CLPS-0950/blob/main/Demo.gif)
